@@ -1,8 +1,9 @@
 import dotenv from "dotenv";
 import mysql from "mysql2/promise";
+import { readFileSync } from "node:fs";
 
 dotenv.config();
-
+const ca = readFileSync(new URL("../certs/ca.pem", import.meta.url));
 // Database connection pool
 export const db = mysql.createPool({
   host: process.env.DB_HOST,
@@ -13,6 +14,7 @@ export const db = mysql.createPool({
 
   // Secure connection to Aiven MySQL
   ssl: {
+    ca,
     rejectUnauthorized: true,
   },
 
