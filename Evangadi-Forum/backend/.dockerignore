@@ -1,0 +1,6 @@
+node_modules
+.env
+uploads/chat/*
+uploads/rag/*
+!uploads/chat/.gitkeep
+!uploads/rag/.gitkeep

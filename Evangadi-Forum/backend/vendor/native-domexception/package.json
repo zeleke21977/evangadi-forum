@@ -1,0 +1,8 @@
+{
+  "name": "native-domexception",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Exports Node's built-in DOMException for dependencies that require node-domexception.",
+  "main": "index.cjs",
+  "engines": { "node": ">=18" }
+}
