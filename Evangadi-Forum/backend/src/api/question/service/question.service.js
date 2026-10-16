@@ -28,7 +28,7 @@ export const createQuestionWithVectorService = async (payload) => {
   const { userId, authorFirstName, title, content } = payload;
 
   const insertQuestionsql =
-    "INSERT INTO QUESTIONS (question_hash, user_id, title, content) VALUES (?, ?, ?, ?)";
+    "INSERT INTO questions (question_hash, user_id, title, content) VALUES (?, ?, ?, ?)";
 
   //generate a unique hash for the question
   const questionHash = generateQuestionHash();
